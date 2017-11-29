@@ -15,10 +15,12 @@ namespace CookerAPI.Controllers
     public class AccountController : ApiController
     {
         private AuthRepository _repo = null;
+        private CookerContext cooker_db = null;
 
         public AccountController()
         {
             _repo = new AuthRepository();
+            cooker_db = new CookerContext();
         }
 
         // POST api/Account/Register
@@ -40,7 +42,16 @@ namespace CookerAPI.Controllers
                 return errorResult;
             }
 
-            return Ok();
+            List l = new List() { Items = "" };
+            cooker_db.Lists.Add(l);
+            cooker_db.SaveChanges();
+
+
+            UserDetail ud = new UserDetail() { Login = userModel.UserName, Id_List = l.Id_List, Social_Account = false };
+            cooker_db.Users.Add(ud);
+            cooker_db.SaveChanges();
+
+            return Ok("Created");
         }
 
         protected override void Dispose(bool disposing)
