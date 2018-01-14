@@ -29,7 +29,6 @@ namespace CookerAPI.Controllers
         // GET: api/Recipes
         public IQueryable<Recipe> GetRecipes()
         {
-
             return db.Recipes;
         }
 
@@ -97,9 +96,7 @@ namespace CookerAPI.Controllers
         public async Task<IHttpActionResult> GetRecipe(int id_recipe)
         {
             var recipe = await db.Recipes.SingleOrDefaultAsync(x => x.Id_Recipe == id_recipe);
-
             var r_d = new Recipe_Details();
-
             r_d.Id_Recipe = recipe.Id_Recipe;
             r_d.Name_Recipe = recipe.Name_Recipe;
             r_d.Rate = recipe.Rate;
@@ -198,6 +195,7 @@ namespace CookerAPI.Controllers
         }
 
         // POST: api/Recipes
+        [Authorize]
         [ResponseType(typeof(Recipe))]
         public IHttpActionResult PostRecipe(Recipe recipe)
         {
@@ -205,6 +203,8 @@ namespace CookerAPI.Controllers
             {
                 return BadRequest(ModelState);
             }
+
+            recipe.Visible = false;
 
             db.Recipes.Add(recipe);
             db.SaveChanges();

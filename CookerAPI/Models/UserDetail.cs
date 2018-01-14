@@ -18,6 +18,7 @@ namespace CookerAPI.Models
         public int Id_List { get; set; }
         public Boolean Social_Account { get; set; } // 1 - social account, 0 - normal account
         public string URL_Avatar { get; set; } //URL of avatar thumbnail
+        public Boolean Admin { get; set; }
 
         [ForeignKey("Id_List")]
         public List List { get; set; }

@@ -47,7 +47,7 @@ namespace CookerAPI.Controllers
             cooker_db.SaveChanges();
 
 
-            UserDetail ud = new UserDetail() { Login = userModel.UserName, Id_List = l.Id_List, Social_Account = false };
+            UserDetail ud = new UserDetail() { Login = userModel.UserName, Id_List = l.Id_List, Social_Account = false, Admin=false };
             cooker_db.Users.Add(ud);
             cooker_db.SaveChanges();
 

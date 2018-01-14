@@ -6,6 +6,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Http;
+using CookerAPI.DB;
+using System.Text;
+using System.Xml;
+using System.Data.Entity.Infrastructure;
 
 [assembly: OwinStartup(typeof(CookerAPI.Startup))]
 namespace CookerAPI
@@ -36,6 +40,16 @@ namespace CookerAPI
             // Token Generation
             app.UseOAuthAuthorizationServer(OAuthServerOptions);
             app.UseOAuthBearerAuthentication(new OAuthBearerAuthenticationOptions());
+
+            
+
+            using (var ctx = new CookerContext())
+            {
+                using (var writer = new XmlTextWriter(@"c:\Model.edmx", Encoding.Default))
+                {
+                    EdmxWriter.WriteEdmx(ctx, writer);
+                }
+            }
 
         }
 

@@ -177,13 +177,51 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\css\font-awesome.css" />
+    <Content Include="Assets\css\font-awesome.min.css" />
+    <Content Include="Assets\css\style.css" />
+    <Content Include="Assets\dist\css\bootstrap-grid.css" />
+    <Content Include="Assets\dist\css\bootstrap-grid.min.css" />
+    <Content Include="Assets\dist\css\bootstrap-reboot.css" />
+    <Content Include="Assets\dist\css\bootstrap-reboot.min.css" />
+    <Content Include="Assets\dist\css\bootstrap.css" />
+    <Content Include="Assets\dist\css\bootstrap.min.css" />
+    <Content Include="Assets\dist\js\bootstrap.js" />
+    <Content Include="Assets\dist\js\bootstrap.min.js" />
+    <Content Include="Assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="Assets\js\bootstrap-datepicker.js" />
+    <Content Include="Assets\js\chart-data.js" />
+    <Content Include="Assets\js\chart.min.js" />
+    <Content Include="Assets\js\custom.js" />
+    <Content Include="Assets\js\easypiechart-data.js" />
+    <Content Include="Assets\js\easypiechart.js" />
+    <Content Include="Assets\js\html5shiv.min.js" />
+    <Content Include="Assets\js\jquery-1.11.1.min.js" />
+    <Content Include="Assets\js\jquery-3.2.1.min.js" />
+    <Content Include="Assets\js\respond.min.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Views\Index.html" />
+    <Content Include="Views\Login.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Assets\dist\css\bootstrap-grid.css.map" />
+    <Content Include="Assets\dist\css\bootstrap-grid.min.css.map" />
+    <Content Include="Assets\dist\css\bootstrap-reboot.css.map" />
+    <Content Include="Assets\dist\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Assets\dist\css\bootstrap.css.map" />
+    <Content Include="Assets\dist\css\bootstrap.min.css.map" />
+    <Content Include="Assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="Assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="Assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Assets\fonts\FontAwesome.otf" />
+    <Content Include="Assets\sass\.sass-cache\a54d729c4cd4eadb887b2589595bf4a3f4989946\style.scssc" />
+    <Content Include="Assets\sass\config.codekit" />
+    <Content Include="Assets\sass\style.scss" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -226,6 +264,7 @@
     <Compile Include="Models\Category_Recipe.cs" />
     <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\Element.cs" />
+    <Compile Include="Models\Favorites.cs" />
     <Compile Include="Models\List.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\Rate.cs" />
@@ -256,6 +295,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Assets\images\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
